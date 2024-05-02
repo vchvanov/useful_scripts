@@ -1,0 +1,60 @@
+What was the main idea?
+
+APC (Auto Power Control) is widely used type of equipment in Lab.
+Usually it takes time (around several minutes each time) to find to which APC IP and port every device connected for rebooting it or power off/on.
+In the same moment very rare performed any changes for such info as APC IP and port of every device.
+This tool helps to minimize time for reboot/power on/power off any device in Lab.
+
+Tool design
+
+Connection to every device occurs by telnet
+Before launching be sure that telnet is enabled on device
+
+apc_controller.py - main script
+
+apc_hosts.txt - contains all the data regarding APC IP and port
+
+All the columns inside the file use space separator
+3 first columns are used for filtering
+
+  Column 1 - setup number (name or id of testing environment)
+  Column 2 - device type (name or id of device category)
+  Column 3 - device id
+
+Rest of columns contain APC data
+
+ Column 4 - APC ip
+ Column 5 - APC port (23 - telnet)
+ Column 6 - telnet timeout (specifies a timeout in seconds for blocking operations like the connection attemp, if not specified, the global default timeout setting will be used)
+ Column 7 - login
+ Column 8 - password
+ Column 9 - port name/id
+
+apc_type_mapping.txt - contains mapping of APC IP and type (type is the function in apc_desc.py, which will be applied)
+
+type1
+
+Server Technology Sentry Switched CDU Version 6.1d
+Server Technology Sentry Switched CDU Version 6.1e
+Server Technology Sentry Switched CDU Version 6.0k
+Server Technology Sentry Switched CDU Version 7.0h
+Server Technology Sentry Switched CDU Version 7.0k
+Server Technology Sentry Switched CDU Version 7.0n
+Server Technology Sentry Switched CDU Version 7.0t
+
+type2
+
+Server Technology Sentry Switched PDU Version 8.0k
+Server Technology Sentry Switched PDU Version 8.0n
+
+type3
+
+Schneider Electric apc1B0D3E
+
+type4
+
+Raritan PDU (with root access)
+
+type5
+
+Raritan PDU (with limited access)

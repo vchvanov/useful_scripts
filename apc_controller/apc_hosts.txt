@@ -1,0 +1,19 @@
+###### Setup devices table ######
+##
+# Format: <setup number> <device type> <id> <ip> <telnet port> <telnet lock timeout> <APC login> <APC password> <APC port name/number>
+#
+###### Setup 1 ######
+#
+S1 MultipleDevice1 NA ip1 23 10 login password 5
+S1 MultipleDevice1 NA ip1 23 10 login password 6
+S1 MultipleDevice1 NA ip2 23 10 login password 5
+S1 SingleDevice1 1 ip2 23 10 login password 9
+S1 SingleDevice1 2 ip3 23 10 login password 2
+S1 SingleDevice2 1 ip4 23 10 login password 7
+#
+###### Setup 2 ######
+#
+S2 SingleDevice1 3 ip5 23 10 login password 7
+S2 SingleDevice3 1 ip1 23 10 login password 12
+S2 MultipleDevice2 NA ip4 23 10 login password 24
+#
