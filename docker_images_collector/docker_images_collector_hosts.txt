@@ -1,0 +1,4 @@
+setup1 ip1 port login password
+setup2 ip1 port login password
+setup3 ip2 port login password
+setup4 ip3 port login password

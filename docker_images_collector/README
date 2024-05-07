@@ -1,0 +1,21 @@
+What was the main idea?
+
+We have in the Lab Linux VM per one or two setups with docker based containers
+Every container is used for managing setup system.
+
+Periodically we perform changes in these containers and in case of any Lab issues (vCenter issue, power outages and etc)
+we're under risk to loose these changes
+
+This tool is saving container state, performing it's backup, which stores on separate Linux VM (from which tool is executed)
+We've added it to Linux VM cron to be executed once per week
+
+Prerequisite for the script, which is not mandatory - to have Apache installed and running on the Linux VM
+If you don't use / don't want to use Apache, you'll need to replace '/var/www/html/' with any other directory you need
+
+Tool design
+
+docker_images_collector.py           - main script
+docker_images_collector_functions.py - collection of functions used in the script
+docker_images_collector_hosts.txt    - storage of input data
+
+In docker_images_collector_hosts.txt : setup must be equal to docker container name
